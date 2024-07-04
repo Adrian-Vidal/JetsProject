@@ -12,7 +12,7 @@ public class AirField {
 	
 	public AirField() {
 		jets = new ArrayList<>();
-		//create 5 different jet objects, add them to list
+		//TODO create 5 different jet objects, add them to list
 		
 	}
 	
