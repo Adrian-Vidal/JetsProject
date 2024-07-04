@@ -20,9 +20,7 @@ public abstract class Jet {
 
 	public void getSpeedInMach() {
 		System.out.println("Jet speed in Mach: " + (speed / 767.269));
-	
-		
-	
+
 	}
 
 	public String getModel() {
