@@ -1,19 +1,19 @@
 package com.skilldistillery.jets;
 
-public class CargoJet extends Jet implements CargoCarrier {
+public class FighterJet extends Jet implements CombatReady {
 
-	public CargoJet(String model, double speed, int range, long price) {
+	public FighterJet(String model, double speed, int range, long price) {
 		super(model, speed, range, price);
 	}
 
 	@Override
-	public void loadCargo() {
-		System.out.println("Loading cargo into cargo jet.");
+	public void fight() {
+		System.out.println("Weapon systems activated, locking on target.");
 	}
 
 	@Override
 	public void fly() {
-		System.out.println("Cargo plane is flying slow, but carries large amounts of cargo.");
+		System.out.println("Fighter jet is flying at high speeds.");
 		System.out.println("Model: " + getModel());
 		System.out.println("Speed: " + getSpeed());
 		System.out.println("Range: " + getRange());
