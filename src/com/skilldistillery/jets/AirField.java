@@ -32,4 +32,16 @@ public class AirField {
 		}
 	}
 
+	public Jet getFastestJet() {
+		if (jets.isEmpty()) {
+			return null;
+		}
+		Jet fastestJet = jets.get(0);
+		for (Jet jet : jets) {
+			if (jet.getSpeed() > fastestJet.getSpeed()) {
+				fastestJet = jet;
+			}
+		}
+		return fastestJet;
+	}
 }

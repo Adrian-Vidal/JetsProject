@@ -34,6 +34,13 @@ public class JetsApp {
 				break;
 
 			case 3:
+				Jet fastestJet = airfield.getFastestJet();
+				if (fastestJet != null) {
+					System.out.println("The fastest jet is: " + fastestJet);
+				} else {
+					System.out.println("No jets in the airfield.");
+				}
+				break;
 			case 4:
 			case 5:
 			case 6:
@@ -41,9 +48,10 @@ public class JetsApp {
 				System.out.println(
 						"\n=======================================\n\nChoose which jet you would like to add: \n"
 								+ "1.) Passenger jet\n2.) Cargo jet\n3.) Fighter jet");
-				userSelection = keyboard.nextInt();
+				int jetSelection;
+				jetSelection = keyboard.nextInt();
 
-				if (userSelection == 1) {
+				if (jetSelection == 1) {
 					System.out.println("Enter the model of the passenger jet:");
 					keyboard.nextLine();
 					String model = keyboard.nextLine();
@@ -56,8 +64,9 @@ public class JetsApp {
 					Jet newPassengerJet = new PassengerJet(model, speed, range, price);
 					airfield.addJet(newPassengerJet);
 					System.out.println("Passenger jet added successfully.");
+					break;
 
-				} else if (userSelection == 2) {
+				} else if (jetSelection == 2) {
 					System.out.println("Enter the model of the cargo jet:");
 					keyboard.nextLine();
 					String model = keyboard.nextLine();
@@ -70,8 +79,9 @@ public class JetsApp {
 					Jet newCargoJet = new CargoJet(model, speed, range, price); // Use FighterJet instead of Jet
 					airfield.addJet(newCargoJet);
 					System.out.println("Cargo jet added successfully.");
+					break;
 
-				} else if (userSelection == 3) {
+				} else if (jetSelection == 3) {
 					System.out.println("Enter the model of the fighter jet:");
 					keyboard.nextLine();
 					String model = keyboard.nextLine();
@@ -85,8 +95,19 @@ public class JetsApp {
 					airfield.addJet(newFighterJet);
 					System.out.println("Fighter jet added successfully.");
 					break;
+				
+				} else {
+					System.out.println("Invalid selection. Returning to menu.");
+					break;
+					
 				}
-
+			case 8:
+			case 9: 
+			System.out.println("Exiting Jets App.");
+			System. exit(0);
+			default:
+				System.out.println("Invalid selection. Please select a valid option.");
+				break;
 			}
 		} while (userSelection != 9);
 
