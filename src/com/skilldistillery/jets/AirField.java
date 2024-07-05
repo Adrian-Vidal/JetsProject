@@ -22,11 +22,7 @@ public class AirField {
 	public void listJets() {
 		System.out.println("List of Jets:");
 		for (Jet jet : jets) {
-			System.out.println("Model: " + jet.getModel());
-			System.out.println("Speed: " + jet.getSpeed());
-			System.out.println("Range: " + jet.getRange());
-			System.out.println("Price: " + jet.getPrice());
-			System.out.println("----------------------------------------");
+			System.out.println(jet);
 		}
 	}
 }
