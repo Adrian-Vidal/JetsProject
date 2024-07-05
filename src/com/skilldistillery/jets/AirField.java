@@ -20,9 +20,16 @@ public class AirField {
 	}
 
 	public void listJets() {
-		System.out.println("List of Jets:");
+		System.out.println("\n=============\n\nList of Jets:\n");
 		for (Jet jet : jets) {
 			System.out.println(jet);
 		}
 	}
+
+	public void flyAllJets() {
+		for (Jet jet : jets) {
+			jet.fly();
+		}
+	}
+
 }
