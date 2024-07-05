@@ -32,7 +32,7 @@ public class JetsApp {
 			case 2:
 				airfield.flyAllJets();
 				break;
-				
+
 			case 3:
 			case 4:
 			case 5:
@@ -91,12 +91,6 @@ public class JetsApp {
 		} while (userSelection != 9);
 
 	}
-
-//	private void flyAllJets() {
-//		for (Jet jet : airfield.Jets()) {
-//			jet.fly();
-//		}
-//	}
 
 	private void displayMenu() {
 		System.out.println("\n======================================\n" + "\nPlease make a selection from the menu:\n"
