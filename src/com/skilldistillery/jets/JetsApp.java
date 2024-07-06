@@ -16,7 +16,7 @@ public class JetsApp {
 
 	public void launchApp() {
 		int userSelection;
-		System.out.print("Welcome to the Jets App. Press the enter/return button to start.");
+		System.out.print("Welcome to the Jets App. Press the enter/return button to launch.");
 		keyboard.nextLine();
 
 		do {
@@ -36,7 +36,8 @@ public class JetsApp {
 			case 3:
 				Jet fastestJet = airfield.getFastestJet();
 				if (fastestJet != null) {
-					System.out.println("The fastest jet is: " + fastestJet);
+					System.out.println("\n============================================================================================\n\n"
+							+ "The fastest jet is: " + fastestJet);
 				} else {
 					System.out.println(
 							"============================================================================================"
@@ -47,7 +48,8 @@ public class JetsApp {
 			case 4:
 				Jet longestDistance = airfield.getLongestDistance();
 				if (longestDistance != null) {
-					System.out.println("The jet with the longest flight distance is " + longestDistance);
+					System.out.println("\n============================================================================================\n\n"
+							+ "The jet with the longest flight distance is " + longestDistance);
 				} else {
 					System.out.println(
 							"============================================================================================"
@@ -58,7 +60,10 @@ public class JetsApp {
 			case 5:
 				airfield.loadAllCargoJets();
 				break;
+				
 			case 6:
+				airfield.attackReady();
+				break;
 
 			case 7:
 				System.out.println(
@@ -124,6 +129,7 @@ public class JetsApp {
 						"\n============================================================================================\n\n"
 								+ "Exiting Jets App.");
 				System.exit(0);
+			
 			default:
 				System.out.println("Invalid selection. Please select a valid option.");
 				break;
@@ -136,8 +142,8 @@ public class JetsApp {
 		System.out.println(
 				"\n============================================================================================\n"
 						+ "\nPlease make a selection from the menu:\n" + "1.) List fleet\n" + "2.) Fly all jets\n"
-						+ "3.) View fastest jet\n" + "4.) View jet with longest range\n" + "5.) Load all cargo jets\n"
-						+ "6.) Fighter jets: Attack mode!\n" + "7.) Add a jet to the fleet\n"
+						+ "3.) View the fastest jet\n" + "4.) View the jet with the longest range\n" + "5.) Load all cargo jets\n"
+						+ "6.) Fighter jets, attack!\n" + "7.) Add a jet to the fleet\n"
 						+ "8.) Remove a jet from the fleet\n" + "9.) Quit");
 	}
 

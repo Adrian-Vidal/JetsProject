@@ -7,7 +7,8 @@ public class FighterJet extends Jet implements CombatReady {
 
 	@Override
 	public void fight() {
-		System.out.println("Weapon systems activated, locking on target.");
+		System.out.println("\n============================================================================================\n\n"
+				+ "Lock and load. " + getModel() + " is ready to intercept the target.");
 	}
 
 	@Override

@@ -81,8 +81,25 @@ public class AirField {
 			}
 		}
 		if (!hasCargoJet) {
-			System.out.println("\n============================================================================================\n\n"
-					+ "No cargo jets available to load.");
+			System.out.println(
+					"\n============================================================================================\n\n"
+							+ "No cargo jets available to load.");
+		}
+	}
+
+	public void attackReady() {
+		boolean hasFighterJet = false;
+		for (Jet jet : jets) {
+			if (jet instanceof FighterJet) {
+				((FighterJet) jet).fight();
+				hasFighterJet = true;
+
+			}
+		}
+		if (!hasFighterJet) {
+			System.out.println(
+					"\n============================================================================================\n\n"
+							+ "No fighter jets to prepare for battle.");
 		}
 	}
 }

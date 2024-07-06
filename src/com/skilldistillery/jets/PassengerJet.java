@@ -8,7 +8,8 @@ public class PassengerJet extends Jet {
 	@Override
 	public void fly() {
 		double flightTime = (getRange() / getSpeed());
-		System.out.println("\nThe $" + getPrice() + " " + getModel() + " passenger jet is flying.\n"
+		System.out.println("\n============================================================================================\n\n"
+				+ "The $" + getPrice() + " " + getModel() + " passenger jet is flying.\n"
 				+ "This jet flys at " + getSpeed() + " MPH " + "with a maximum flight distance of " + getRange()
 				+ " miles.\n" + "Dividing the range of " + getRange() + " miles by the speed of " + getSpeed() + " MPH "
 				+ "gives the " + getModel() + " an estimated flight time of ");
