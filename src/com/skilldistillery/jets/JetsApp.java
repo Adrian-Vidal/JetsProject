@@ -67,7 +67,7 @@ public class JetsApp {
 
 			case 7:
 				System.out.println(
-						"\n============================================================================================\n\nChoose which jet you would like to add: \n"
+						"\n============================================================================================\n\nChoose which jet you would like to add:\n\n"
 								+ "1.) Passenger jet\n2.) Cargo jet\n3.) Fighter jet");
 				int jetSelection;
 				jetSelection = keyboard.nextInt();
@@ -124,8 +124,10 @@ public class JetsApp {
 				}
 				
 			case 8:
-				System.out.println("Select the jet you want to remove:");
-			    int indexToRemove = keyboard.nextInt();
+				System.out.println("\n============================================================================================\n\n"
+						+ "Select the jet you would like to remove:\n");
+			    airfield.listJets();
+				int indexToRemove = -1 + keyboard.nextInt();
 			    airfield.removeJet(indexToRemove);
 			    break;
 				

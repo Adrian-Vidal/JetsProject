@@ -28,8 +28,10 @@ public class AirField {
 			System.out.println(
 					"\n============================================================================================"
 							+ "\n\nList of Jets:\n");
-			for (Jet jet : jets) {
-				System.out.println(jet);
+			for (int i = 0; i < jets.size(); i++) {
+	            Jet jet = jets.get(i);
+	            System.out.println((i + 1) + ". " + jet);
+	        
 			}
 		}
 	}
@@ -38,7 +40,7 @@ public class AirField {
 		if (jets.isEmpty()) {
 			System.out.println(
 					"\n============================================================================================"
-							+ "\n\nNo jets available to fly.\n");
+							+ "\n\nNo jets available to fly.");
 		} else {
 			for (Jet jet : jets) {
 				jet.fly();
