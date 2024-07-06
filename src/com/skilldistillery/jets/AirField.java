@@ -20,15 +20,29 @@ public class AirField {
 	}
 
 	public void listJets() {
-		System.out.println("\n=============\n\nList of Jets:\n");
-		for (Jet jet : jets) {
-			System.out.println(jet);
+		if (jets.isEmpty()) {
+			System.out.println(
+					"\n============================================================================================"
+							+ "\n\nNo jets available in the airfield.");
+		} else {
+			System.out.println(
+					"\n============================================================================================"
+							+ "\n\nList of Jets:\n");
+			for (Jet jet : jets) {
+				System.out.println(jet);
+			}
 		}
 	}
 
 	public void flyAllJets() {
-		for (Jet jet : jets) {
-			jet.fly();
+		if (jets.isEmpty()) {
+			System.out.println(
+					"\n============================================================================================"
+							+ "\n\nNo jets available to fly.\n");
+		} else {
+			for (Jet jet : jets) {
+				jet.fly();
+			}
 		}
 	}
 
@@ -43,5 +57,32 @@ public class AirField {
 			}
 		}
 		return fastestJet;
+	}
+
+	public Jet getLongestDistance() {
+		if (jets.isEmpty()) {
+			return null;
+		}
+		Jet longestDistance = jets.get(0);
+		for (Jet jet : jets) {
+			if (jet.getRange() > longestDistance.getRange()) {
+				longestDistance = jet;
+			}
+		}
+		return longestDistance;
+	}
+
+	public void loadAllCargoJets() {
+		boolean hasCargoJet = false;
+		for (Jet jet : jets) {
+			if (jet instanceof CargoJet) {
+				((CargoJet) jet).loadCargo();
+				hasCargoJet = true;
+			}
+		}
+		if (!hasCargoJet) {
+			System.out.println("\n============================================================================================\n\n"
+					+ "No cargo jets available to load.");
+		}
 	}
 }
