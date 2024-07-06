@@ -102,4 +102,13 @@ public class AirField {
 							+ "No fighter jets to prepare for battle.");
 		}
 	}
+
+	public void removeJet(int index) {
+		if (index >= 0 && index < jets.size()) {
+			jets.remove(index);
+			System.out.println("Jet removed successfully.");
+		} else {
+			System.out.println("Invalid selection. No jet removed.");
+		}
+	}
 }

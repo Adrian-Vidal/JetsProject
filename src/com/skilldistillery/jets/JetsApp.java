@@ -122,8 +122,13 @@ public class JetsApp {
 					break;
 
 				}
+				
 			case 8:
-
+				System.out.println("Select the jet you want to remove:");
+			    int indexToRemove = keyboard.nextInt();
+			    airfield.removeJet(indexToRemove);
+			    break;
+				
 			case 9:
 				System.out.println(
 						"\n============================================================================================\n\n"
