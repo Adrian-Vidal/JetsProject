@@ -101,7 +101,7 @@ public class AirField {
 		if (!hasFighterJet) {
 			System.out.println(
 					"\n============================================================================================\n\n"
-							+ "No fighter jets to prepare for battle.");
+							+ "No fighter jets available to prepare for battle.");
 		}
 	}
 
